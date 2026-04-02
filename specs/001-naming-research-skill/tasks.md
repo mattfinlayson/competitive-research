@@ -25,12 +25,12 @@
 
 **Purpose**: Project initialization and skills directory structure
 
-- [ ] T001 Create skills directory structure at skills/naming-research/
-- [ ] T002 [P] Create skills/naming-research/references/ subdirectory
-- [ ] T003 Initialize package.json with TypeScript and vitest dependencies
-- [ ] T004 [P] Configure TypeScript config (tsconfig.json)
-- [ ] T005 Configure vitest for testing
-- [ ] T006 Configure linting (eslint, prettier)
+- [X] T001 Create skills directory structure at skills/naming-research/
+- [X] T002 [P] Create skills/naming-research/references/ subdirectory
+- [X] T003 Initialize package.json with TypeScript and vitest dependencies
+- [X] T004 [P] Configure TypeScript config (tsconfig.json)
+- [X] T005 Configure vitest for testing
+- [X] T006 Configure linting (eslint, prettier)
 
 ---
 
@@ -40,11 +40,11 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T007 Create skills/naming-research/SKILL.md with spellbook frontmatter
-- [ ] T008 Add trigger phrases section to SKILL.md
-- [ ] T009 Add "When to Use" and "When NOT to Use" sections to SKILL.md
-- [ ] T010 Add gotchas section to SKILL.md
-- [ ] T011 Verify SKILL.md meets quality gates (<500 lines, triggers, gotchas)
+- [X] T007 Create skills/naming-research/SKILL.md with spellbook frontmatter
+- [X] T008 Add trigger phrases section to SKILL.md
+- [X] T009 Add "When to Use" and "When NOT to Use" sections to SKILL.md
+- [X] T010 Add gotchas section to SKILL.md
+- [X] T011 Verify SKILL.md meets quality gates (<500 lines, triggers, gotchas)
 
 **Checkpoint**: Core skill structure complete - user story implementation can now begin
 
@@ -58,15 +58,15 @@
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create skills/naming-research/references/archetypes.md (naming patterns)
-- [ ] T013 [P] [US1] Create skills/naming-research/references/trademark.md (clearance methodology)
-- [ ] T014 [P] [US1] Create skills/naming-research/references/linguistic.md (pronunciation/spelling)
-- [ ] T015 [P] [US1] Create skills/naming-research/references/brand-fit.md (phase evolution)
-- [ ] T016 [P] [US1] Create skills/naming-research/references/emotional.md (association testing)
-- [ ] T017 [US1] Update SKILL.md to reference all 6 dimensions with guidance
-- [ ] T018 [US1] Add scoring rubric (1-5 scale) to SKILL.md body
-- [ ] T019 [US1] Create CLI wrapper in src/cli/naming-research.ts
-- [ ] T020 [US1] Test CLI wrapper with domain query "compliance software"
+- [X] T012 [P] [US1] Create skills/naming-research/references/archetypes.md (naming patterns)
+- [X] T013 [P] [US1] Create skills/naming-research/references/trademark.md (clearance methodology)
+- [X] T014 [P] [US1] Create skills/naming-research/references/linguistic.md (pronunciation/spelling)
+- [X] T015 [P] [US1] Create skills/naming-research/references/brand-fit.md (phase evolution)
+- [X] T016 [P] [US1] Create skills/naming-research/references/emotional.md (association testing)
+- [X] T017 [US1] Update SKILL.md to reference all 6 dimensions with guidance
+- [X] T018 [US1] Add scoring rubric (1-5 scale) to SKILL.md body
+- [X] T019 [US1] Create CLI wrapper in src/cli/naming-research.ts
+- [X] T020 [US1] Test CLI wrapper with domain query "compliance software"
 
 **Checkpoint**: User Story 1 MVP complete - skill produces full markdown report
 
