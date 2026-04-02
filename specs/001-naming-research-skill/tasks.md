@@ -80,12 +80,12 @@
 
 ### Implementation for User Story 2
 
-- [ ] T021 [P] [US2] Update SKILL.md with evaluation workflow (--names flag)
-- [ ] T022 [P] [US2] Add candidate scoring guidance to SKILL.md body
-- [ ] T023 [US2] Update CLI wrapper to accept --names option
-- [ ] T024 [US2] Add comparison table format to SKILL.md
-- [ ] T025 [US2] Add name category analysis (literal, evocative, abstract, compound, short) to SKILL.md
-- [ ] T026 [US2] Test CLI with --names "Attest,Certify,Vouch"
+- [X] T021 [P] [US2] Update SKILL.md with evaluation workflow (--names flag)
+- [X] T022 [P] [US2] Add candidate scoring guidance to SKILL.md body
+- [X] T023 [US2] Update CLI wrapper to accept --names option
+- [X] T024 [US2] Add comparison table format to SKILL.md
+- [X] T025 [US2] Add name category analysis (literal, evocative, abstract, compound, short) to SKILL.md
+- [X] T026 [US2] Test CLI with --names "Attest,Certify,Vouch"
 
 **Checkpoint**: User Story 2 complete - agent can evaluate specific names
 
@@ -99,11 +99,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T027 [P] [US3] Add finalists generation guidance to SKILL.md
-- [ ] T028 [P] [US3] Define confidence level derivation (high ≥4.0, medium 3.0-3.9, low <3.0)
-- [ ] T029 [US3] Add availability summary format to SKILL.md (domains + social)
-- [ ] T030 [US3] Update CLI to output finalists section
-- [ ] T031 [US3] Test final output includes ranked finalists with confidence
+- [X] T027 [P] [US3] Add finalists generation guidance to SKILL.md
+- [X] T028 [P] [US3] Define confidence level derivation (high ≥4.0, medium 3.0-3.9, low <3.0)
+- [X] T029 [US3] Add availability summary format to SKILL.md (domains + social)
+- [X] T030 [US3] Update CLI to output finalists section
+- [X] T031 [US3] Test final output includes ranked finalists with confidence
 
 **Checkpoint**: User Story 3 complete - full deliverable quality
 
@@ -113,12 +113,12 @@
 
 **Purpose**: Quality gates, documentation, and harness eval
 
-- [ ] T032 [P] Validate SKILL.md against spellbook quality gates
-- [ ] T033 [P] Create skills/naming-research/references/examples.md with usage examples
-- [ ] T034 Create tests/unit/parsing.test.ts for CLI output validation
-- [ ] T035 Create tests/harness/naming-research.eval.ts for spellbook harness eval
-- [ ] T036 Update skills/naming-research/quickstart.md (copy from specs/quickstart.md)
-- [ ] T037 Add to repository index.yaml (spellbook registry)
+- [X] T032 [P] Validate SKILL.md against spellbook quality gates
+- [X] T033 [P] Create skills/naming-research/references/examples.md with usage examples
+- [X] T034 Create tests/unit/parsing.test.ts for CLI output validation
+- [X] T035 Create tests/harness/naming-research.eval.ts for spellbook harness eval
+- [X] T036 Update skills/naming-research/quickstart.md (copy from specs/quickstart.md)
+- [X] T037 Add to repository index.yaml (spellbook registry)
 
 ---
 

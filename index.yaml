@@ -1,0 +1,17 @@
+# Spellbook Skills Registry
+# This file registers skills for spellbook harness discovery
+
+skills:
+  - name: naming-research
+    source: ./skills/naming-research
+    description: |
+      Systematic naming research for product/company naming decisions.
+      Covers 6 dimensions: archetypes, trademark, linguistic, brand fit,
+      emotional, and naming categories.
+    triggers:
+      - "naming research"
+      - "brand name"
+      - "company naming"
+      - "product naming"
+      - "evaluate names"
+    version: "1.0.0"

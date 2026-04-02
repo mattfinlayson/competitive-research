@@ -126,6 +126,49 @@ Derived from aggregate score:
 | Literal     | SubProcess | pros/cons |
 | Evocative   | Attest, Certify | pros/cons |
 
+## Finalists Generation
+
+Generate ranked recommendations after scoring all candidates:
+
+### Selection Criteria
+1. **Aggregate score** ≥ 3.0 (below = not recommended)
+2. **Domain availability** (.com, .io, or .ly)
+3. **Confidence level** (prefer high > medium)
+
+### Output Format
+
+```markdown
+## Finalists
+
+### Ranked Recommendations
+
+| Rank | Name | TLD | Score | Confidence | Key Strength |
+|------|------|-----|-------|------------|---------------|
+| 1 | Attest | .ly | 3.95 | Medium | Clear pronunciation, strong archetype |
+| 2 | Certify | .app | 3.82 | Medium | Official connotation, professional |
+| 3 | Vouch | .com | 3.71 | Medium | Memorable, short, available |
+
+### Detailed Rationale
+
+1. **Attest (.ly)**
+   - Score: 3.95 (Medium confidence)
+   - Strengths: Clear, professional, trust connotations
+   - Concerns: .com/.io taken, requires branding for .ly
+   - Verdict: Viable with branding investment
+
+2. **Certify (.app)**
+   - Score: 3.82 (Medium confidence)
+   - Strengths: Official, clear meaning, .app available
+   - Concerns: .com/.io taken, slightly formal
+   - Verdict: Good for enterprise positioning
+
+3. **Vouch (.com)**
+   - Score: 3.71 (Medium confidence)
+   - Strengths: Memorable, short, .com available
+   - Concerns: Limited scope perception, casual
+   - Verdict: Viable if brand is modern/friendly
+```
+
 ## Finalists
 1. **[Name]** ([TLD]) - Confidence: [level]
    - Rationale: [why this candidate]
@@ -141,6 +184,92 @@ Detailed guidance for each dimension is in `references/`:
 - `brand-fit.md` - Brand architecture guidance
 - `emotional.md` - Emotional association testing
 - `examples.md` - Usage examples
+
+## Evaluation Workflow
+
+When evaluating name candidates with `--names` flag:
+
+### Input
+```bash
+naming-research "compliance software" --names "Attest,Certify,Vouch"
+```
+
+### Process
+1. **Score each candidate** per dimension (1-5 rubric)
+2. **Calculate aggregate score** using weighted formula
+3. **Assess availability** across TLDs and social
+4. **Generate associations** (3 words per candidate)
+5. **Rank finalists** by aggregate score
+
+### Scoring Formula
+```
+aggregateScore = (archetypes × 0.15) + (trademark × 0.30) + (linguistic × 0.20) 
+              + (brandFit × 0.20) + (emotional × 0.15)
+```
+
+### Confidence Derivation
+| Aggregate Score | Confidence |
+|-----------------|------------|
+| ≥4.0 | High |
+| 3.0 - 3.9 | Medium |
+| <3.0 | Low |
+
+## Comparison Table Format
+
+When evaluating multiple names, produce this table:
+
+```markdown
+## 6. Naming Categories
+
+| Category | Attest | Certify | Vouch |
+|----------|--------|---------|-------|
+| Literal | ⚠️ | ⚠️ | ⚠️ |
+| Evocative | ✅ | ✅ | ✅ |
+| Abstract | ⚠️ | ⚠️ | ⚠️ |
+| Compound | ⚠️ | ⚠️ | ⚠️ |
+| Short | ⚠️ | ⚠️ | ⚠️ |
+
+**Category Assessment**:
+- **Attest**: Evocative (verb-based, action-oriented)
+- **Certify**: Evocative (verb-based, official connotation)
+- **Vouch**: Evocative (verb-based, personal trust)
+```
+
+## Candidate Scoring Guidance
+
+### Per-Dimension Scoring
+
+| Dimension | Score 5 | Score 4 | Score 3 | Score 2 | Score 1 |
+|----------|---------|---------|---------|---------|---------|
+| **Archetypes** | Perfect fit for market | Strong fit | Acceptable | Weak fit | Wrong archetype |
+| **Trademark** | All TLDs available | Minor conflicts | Some taken | Many taken | Completely blocked |
+| **Linguistic** | Perfect clarity | Minor guidance needed | Some confusion | Pronunciation issues | Unusable |
+| **Brand Fit** | Fits all phases | Fits 2 phases | Fits 1 phase | Limits expansion | Wrong direction |
+| **Emotional** | Perfect associations | Strong associations | Mixed | Negative | Wrong message |
+| **Categories** | Ideal category | Good fit | Acceptable | Limited | Wrong category |
+
+### Name Category Analysis
+
+| Category | Characteristics | Best For |
+|----------|-----------------|----------|
+| **Literal** | Direct description (SubProcess, ProcessLog) | Enterprise, technical |
+| **Evocative** | Action/emotion (Attest, Certify) | Trust domains, compliance |
+| **Abstract** | Made-up (Cohesion, Osano) | Platforms, broad scope |
+| **Compound** | Combined words (TrustStack) | Technical, modern |
+| **Short** | Punchy (Prove, Vouch) | Consumer, SaaS |
+
+### Availability Summary Format
+
+```markdown
+## Availability Summary
+
+| Name | .com | .io | .ly | .co | .app | Twitter | LinkedIn | GitHub |
+|------|------|-----|-----|-----|------|---------|----------|--------|
+| Attest | ❌ | ❌ | ✅ | ❌ | ✅ | ? | ? | ✅ |
+| Certify | ❌ | ❌ | ❌ | ❌ | ✅ | ? | ? | ? |
+| Vouch | ✅ | ✅ | ❌ | ❌ | ❌ | ? | ? | ? |
+
+*? = requires verification*
 
 ## Gotchas
 
